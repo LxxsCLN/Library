@@ -8,7 +8,32 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    
+    <div class="header">
+        <p>Library</p>
+    </div>
+    <div class="buttondiv">
+        <button id="addbookbutton">Add Book</button>
+    </div>
+    <div class="maindiv">
+        <div class="card">
+            <div class="title">aaa</div>
+            <div class="author">bbb</div>
+            <div class="pages">222</div>
+            <button class="buttonread">Read</button>
+            <button class="buttonremove">Remove</button>
+        </div>
+    </div>
+    <div class="footer">luiseseberre</div>
+    <div class="formdiv">
+        <form action="" id="bookform">
+            <input type="text" name="title" id="formtitle" placeholder="Title">  
+            <input type="text" name="author" id="formauthor" placeholder="Author">
+            <input type="text" id="formpages" name="pages" placeholder="Pages">
+            <label for="isread" id="formisread">Have you read it?<input type="checkbox" name="isread" id="isread"></label>
+            <button id="submitform">Submit</button>
+        </form>
+    </div>
+    <div class="overlay"></div>
     <script src="script.js"></script>
 </body>
 </html>
