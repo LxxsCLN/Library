@@ -16,6 +16,12 @@ function Book(name, author, pages) {
   this.pages = pages;
 }
 
+/* function create(){
+  myLibrary.forEach(a => {
+
+  });
+}
+ */
 function createCard(a) {
   const card = document.createElement("div");
   card.classList.add("card");
@@ -55,6 +61,8 @@ function createCard(a) {
   });
 
   removebutton.addEventListener("click", () => {
+    const index = myLibrary.indexOf(a);
+    myLibrary.splice(index, 1);
     card.remove();
   });
 }
@@ -76,7 +84,7 @@ submitbutton.addEventListener("click", (e) => {
   if (formtitle.value === "" || formauthor.value === "" || formpages.value === "") return;
   const newbook = new Book(formtitle.value, formauthor.value, formpages.value);
   myLibrary.push(newbook);
-  createCard(myLibrary[myLibrary.length - 1]);
+  createCard(newbook);
   overlay.classList.remove("active");
   formdiv.classList.remove("displayblock");
   e.preventDefault();
