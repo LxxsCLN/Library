@@ -99,7 +99,7 @@ form{
     left: calc(50vw - 182px);
 }
 
-input[type=text]{
+input[type=text],input[type=number]{
     border-style: none;
     background-color: white;
     min-height: 35px;
@@ -121,13 +121,15 @@ input#isread{
     height: 20px;
 }
 
-.displayblock{
-    display: block;
-    z-index: 1;
+@keyframes fadein {
+    from {display: none; opacity:0}
+    to {opacity: 1;}
 }
 
-.addopacity{
-    opacity: .5;
+.displayblock{
+    animation: fadein 250ms;
+    display: block;
+    z-index: 1;
 }
 
 .overlay{
@@ -141,7 +143,12 @@ input#isread{
 }
 
 .active{
+    animation: fadein 250ms;
     display: block;
+}
+
+.cardactive{
+    animation: fadein 400ms;
 }
 
 .greenbutton{

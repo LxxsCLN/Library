@@ -15,20 +15,20 @@
         <button id="addbookbutton">Add Book</button>
     </div>
     <div class="maindiv">
-        <div class="card">
+        <!-- <div class="card">
             <div class="title">aaa</div>
             <div class="author">bbb</div>
             <div class="pages">222</div>
             <button class="buttonread">Read</button>
             <button class="buttonremove">Remove</button>
-        </div>
+        </div> -->
     </div>
     <div class="footer">luiseseberre</div>
     <div class="formdiv">
-        <form action="" id="bookform">
-            <input type="text" name="title" id="formtitle" placeholder="Title">  
-            <input type="text" name="author" id="formauthor" placeholder="Author">
-            <input type="text" id="formpages" name="pages" placeholder="Pages">
+        <form name="bookform" id="bookform">
+            <input type="text" name="title" id="formtitle" placeholder="Title" required>  
+            <input type="text" name="author" id="formauthor" placeholder="Author" required>
+            <input type="number" id="formpages" name="pages" placeholder="Pages" required>
             <label for="isread" id="formisread">Have you read it?<input type="checkbox" name="isread" id="isread"></label>
             <button id="submitform">Submit</button>
         </form>
